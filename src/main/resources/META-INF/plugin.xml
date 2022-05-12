@@ -5,8 +5,12 @@
     <vendor>JetBrains</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
     <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder
+                builderClass="org.jetbrains.plugins.template.module.Arc42ModuleBuilder"/>
+        <moduleType
+                id="MY_MODULE"
+                implementationClass="org.jetbrains.plugins.template.module.Arc42ModuleType"/>
         <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
         <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
     </extensions>
